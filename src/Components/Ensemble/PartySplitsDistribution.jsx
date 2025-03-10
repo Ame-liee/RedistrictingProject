@@ -16,9 +16,6 @@ const PartySplitsDistribution = ({ title, selectedStateAbbr, smdmmd }) => {
         const data = await axios.get(`http://localhost:8080${api}`);
         setData(data.data);
       } catch (error) {
-        console.log(
-          FallBackData("ensemble")[selectedStateAbbr][smdmmd].party.partySplits
-        );
         setFallBack(true);
         setData(
           FallBackData("ensemble")[selectedStateAbbr][smdmmd].party.partySplits
